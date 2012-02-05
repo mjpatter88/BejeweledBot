@@ -1,6 +1,12 @@
 /*
  * This version will attempt to take the screenshot after every move.
  * Possible future improvement would be to make multiple moves for each ss or to add threading.
+ *
+ * This was written in a day or two over Christmas break.  It could be vastly improved, but it
+ * gets the job done.
+ *
+ * Author: Michael Patterson
+ * Date: December 2011
  */
 
 import java.awt.Robot;

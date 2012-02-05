@@ -1,0 +1,3 @@
+This repository holds the code for a bot that automatically plays Bejeweled Blitz on Facebook.
+I wrote this in Java in a day or two of Christmas break in 2011.
+It averages around 300k scores, but often gets up over 500k.

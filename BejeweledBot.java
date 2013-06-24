@@ -44,11 +44,11 @@ public class BejeweledBot
 	private static final Color TIME_UP3_COLOR = new Color(250, 205, 61);
 	*/
 
-	private static final Point TIME_UP = new Point(227, 545);
+	private static final Point TIME_UP = new Point(230, 600);
 	private static final Color TIME_UP_COLOR = new Color(121, 193, 170);
-	private static final Point TIME_UP2 = new Point(304, 561);
-	private static final Color TIME_UP2_COLOR = new Color(103, 156, 150);
-	private static final Point TIME_UP3 = new Point(347, 544);
+	private static final Point TIME_UP2 = new Point(290, 634);
+	private static final Color TIME_UP2_COLOR = new Color(64, 112, 121);
+	private static final Point TIME_UP3 = new Point(350, 600);
 	private static final Color TIME_UP3_COLOR = new Color(138, 255, 200);
 	
 	//TODO:Green, Orange
@@ -85,7 +85,7 @@ public class BejeweledBot
 		
 		//testMouseMovement();
 		int step = 0;
-		while(step < 1200)
+		while(step < 1500)
 		{
 			updateState();
 			makeMove();
@@ -598,7 +598,7 @@ public class BejeweledBot
 		{
 			return false;
 		}
-		System.out.println("Here");
+		//System.out.println("Here");
 		//check second pixel
 		pixel = image.getRGB(TIME_UP2.x, TIME_UP2.y);
 		red = (pixel>>16) & 0xff;
@@ -616,7 +616,7 @@ public class BejeweledBot
 			return false;
 		}
 		
-		System.out.println("Here");
+		//System.out.println("Here");
 		//check third pixel
 		pixel = image.getRGB(TIME_UP3.x, TIME_UP3.y);
 		red = (pixel>>16) & 0xff;

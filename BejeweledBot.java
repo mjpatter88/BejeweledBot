@@ -9,6 +9,9 @@
  * Date: December 2011
  */
 
+// See: https://code.google.com/p/jnativehook/
+// Look into intercepting abort key combo
+
 import java.awt.Robot;
 import java.awt.AWTException;
 import java.awt.event.InputEvent;
@@ -25,8 +28,8 @@ public class BejeweledBot
 {
 	//hardcode some constants (use windows key + left-arrow) 
 	//If position still isn't right move window to center and then use win+left again.
-	private static final int TOP_LEFT_X = 187;	//was 184
-	private static final int TOP_LEFT_Y = 404;	//was 408
+	private static final int TOP_LEFT_X = 190; //187;	//was 184
+	private static final int TOP_LEFT_Y = 460; //404;	//was 408
 	private static final int CELL_WIDTH = 40;
 	private static final int CELL_HEIGHT = 40;
 	private static final int NUM_ROWS = 8;
@@ -48,13 +51,16 @@ public class BejeweledBot
 	private static final Point TIME_UP3 = new Point(347, 544);
 	private static final Color TIME_UP3_COLOR = new Color(138, 255, 200);
 	
+	//TODO:Green, Orange
+	//490, 560 
+
 	private static final Color YELLOW = new Color(254, 245, 35);
 	private static final Color PURPLE = new Color(236, 14, 236);
-	//private static final Color GREEN = new Color(5, 138, 18);	//need to be exact (on center band) (OLD WAY)
-	private static final Color GREEN = new Color(16, 164, 33);
+	private static final Color GREEN = new Color(5, 138, 18);	//need to be exact (on center band) (OLD WAY)
+	//private static final Color GREEN = new Color(16, 164, 33);
 	private static final Color BLUE = new Color(15, 138, 254);
-	//private static final Color ORANGE = new Color(214, 74, 19);	//need to be exact (on center band) (OLD WAY)
-	private static final Color ORANGE = new Color(230, 101, 33);
+	private static final Color ORANGE = new Color(214, 74, 19);	//need to be exact (on center band) (OLD WAY)
+	//private static final Color ORANGE = new Color(230, 101, 33);
 	private static final Color WHITE = new Color(224, 224, 224);	//3 values ALWAYS identical
 	private static final Color RED = new Color(249, 26, 54);
 	
@@ -79,7 +85,7 @@ public class BejeweledBot
 		
 		//testMouseMovement();
 		int step = 0;
-		while(step < 2000)
+		while(step < 1200)
 		{
 			updateState();
 			makeMove();

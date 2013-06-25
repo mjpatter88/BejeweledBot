@@ -50,9 +50,6 @@ public class BejeweledBot
 	private static final Color TIME_UP2_COLOR = new Color(64, 112, 121);
 	private static final Point TIME_UP3 = new Point(350, 600);
 	private static final Color TIME_UP3_COLOR = new Color(138, 255, 200);
-	
-	//TODO:Green, Orange
-	//490, 560 
 
 	private static final Color YELLOW = new Color(254, 245, 35);
 	private static final Color PURPLE = new Color(236, 14, 236);
@@ -71,7 +68,9 @@ public class BejeweledBot
 	private static final Color ORANGE_MUL = new Color(242, 120, 41);
 	private static final Color WHITE_MUL = new Color(198, 198, 198);
 	private static final Color RED_MUL = new Color(183, 12, 24);
-	
+
+	private static final Color COIN = new Color(185, 143, 33);
+	//290, 520
 	
 	private static Robot r;
 	private static BufferedImage image;
@@ -85,12 +84,15 @@ public class BejeweledBot
 		
 		//testMouseMovement();
 		int step = 0;
-		while(step < 1500)
+		while(step < 1700)
 		{
 			updateState();
 			makeMove();
 			step++;
-			System.out.println(step);
+			if(step%10==0)
+			{
+				System.out.println(step);
+			}
 			if(isOver())
 			{
 				System.out.println("Game Over");
@@ -233,6 +235,12 @@ public class BejeweledBot
 		else if((Math.abs(red-YELLOW_MUL.getRed()) < 10) && 
 				(Math.abs(green-YELLOW_MUL.getGreen()) < 10) &&
 				(Math.abs(blue-YELLOW_MUL.getBlue()) < 10))
+		{
+			return true;
+		}
+		else if((Math.abs(red-COIN.getRed()) < 10) && 
+				(Math.abs(green-COIN.getGreen()) < 10) &&
+				(Math.abs(blue-COIN.getBlue()) < 10))	
 		{
 			return true;
 		}
